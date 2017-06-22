@@ -11,7 +11,7 @@ ip_addr = socket.gethostbyname(socket.gethostname())
 def get_card_value(card_name):
     return requests.get("http://magictcgprices.appspot.com/api/cfb/price.json?cardname="+card_name).json()
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__, template_folder='app')
 CORS(app)
 app.secret_key = 'secretsecret'
 
